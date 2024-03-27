@@ -9,11 +9,20 @@ function App(): React.JSX.Element {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="MoviesListScreen" component={MoviesListScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{title: 'Inicio'}}
+        />
+        <Stack.Screen
+          name="MoviesListScreen"
+          component={MoviesListScreen}
+          options={{title: 'Peliculas'}}
+        />
         <Stack.Screen
           name="MoviesDetailScreen"
           component={MoviesDetailScreen}
+          options={{title: 'Detalle'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
