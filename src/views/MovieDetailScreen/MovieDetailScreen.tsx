@@ -122,8 +122,12 @@ function MoviesDetailScreen(props: any): React.JSX.Element {
             </View>
             <View style={styles.row}>
               <Text style={styles.text}>Naves:</Text>
-              {starships?.map((starship: Starship) => {
-                return <Text style={styles.text}>{starship.name}</Text>;
+              {starships?.map((starship: Starship, index: number) => {
+                return (
+                  <Text key={`${starship.name}-${index}`} style={styles.text}>
+                    {starship.name}
+                  </Text>
+                );
               })}
             </View>
           </View>
