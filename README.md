@@ -1,5 +1,7 @@
 ##Step 1: Install packages
 
+create .env file and copy env.example content
+
 ```bash
 yarn
 ```

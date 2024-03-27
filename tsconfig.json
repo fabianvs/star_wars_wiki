@@ -5,9 +5,11 @@
     // Path alias config
     "baseUrl": ".",
     "paths": {
-      // This needs to be mirrored in babel.config.js
-      // Components is a directory with sub directories
-      "views/*": ["src/views/*"]
+      "views/*": ["src/views/*"],
+      "store/*": ["src/store/*"],
+      "assets/*": ["src/assets/*"],
+      "components/*": ["src/components/*"],
+      "globals/*": ["src/globals/*"]
     }
   }
 }
