@@ -12,17 +12,44 @@ function App(): React.JSX.Element {
         <Stack.Screen
           name="Home"
           component={HomeScreen}
-          options={{title: 'Inicio'}}
+          options={{
+            title: 'Inicio',
+            headerStyle: {
+              backgroundColor: 'black',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
         />
         <Stack.Screen
           name="MoviesListScreen"
           component={MoviesListScreen}
-          options={{title: 'Peliculas'}}
+          options={{
+            title: 'Peliculas',
+            headerStyle: {
+              backgroundColor: 'black',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
         />
         <Stack.Screen
           name="MoviesDetailScreen"
           component={MoviesDetailScreen}
-          options={{title: 'Detalle'}}
+          options={{
+            title: 'Detalle',
+            headerStyle: {
+              backgroundColor: 'black',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>
