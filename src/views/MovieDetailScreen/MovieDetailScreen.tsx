@@ -17,7 +17,6 @@ function MoviesDetailScreen(props: any): React.JSX.Element {
   const {movie} = props.route.params;
 
   useEffect(() => {
-    console.log(movie);
     charactersRef.current = [];
     planetsRef.current = [];
     speciesRef.current = [];
@@ -68,10 +67,6 @@ function MoviesDetailScreen(props: any): React.JSX.Element {
     );
   }, []);
 
-  // useEffect(() => {
-  //   console.log(characters);
-  // }, [characters]);
-
   return (
     <View style={globalStyles.container}>
       <ImageBackground
@@ -97,20 +92,32 @@ function MoviesDetailScreen(props: any): React.JSX.Element {
             </View>
             <View style={styles.row}>
               <Text style={styles.text}>Personajes:</Text>
-              {characters?.map((character: People) => {
-                return <Text style={styles.text}>{character.name}</Text>;
+              {characters?.map((character: People, index: number) => {
+                return (
+                  <Text key={`${character.name}-${index}`} style={styles.text}>
+                    {character.name}
+                  </Text>
+                );
               })}
             </View>
             <View style={styles.row}>
               <Text style={styles.text}>Planetas:</Text>
-              {planets?.map((planet: Planet) => {
-                return <Text style={styles.text}>{planet.name}</Text>;
+              {planets?.map((planet: Planet, index: number) => {
+                return (
+                  <Text key={`${planet.name}-${index}`} style={styles.text}>
+                    {planet.name}
+                  </Text>
+                );
               })}
             </View>
             <View style={styles.row}>
               <Text style={styles.text}>Especies:</Text>
-              {species?.map((specie: Specie) => {
-                return <Text style={styles.text}>{specie.name}</Text>;
+              {species?.map((specie: Specie, index: number) => {
+                return (
+                  <Text key={`${specie.name}-${index}`} style={styles.text}>
+                    {specie.name}
+                  </Text>
+                );
               })}
             </View>
             <View style={styles.row}>
